@@ -1,0 +1,12 @@
+<%= form_for [@list, @item] do |f| %>
+  <%= f.label :description, "Task Description" %>
+  <%= f.text_field :description %>
+
+  <br />
+  <%= f.label :priority %>
+  <%= f.select :priority, (1, 2, 3).to_a %>
+
+  <br />
+  <%= f.submit %>
+
+<% end %>

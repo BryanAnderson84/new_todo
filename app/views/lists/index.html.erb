@@ -1,0 +1,14 @@
+<h1>Tasks</h1>
+
+<% if @lists.any? %>
+ <ul>
+	 <% @lists.each do |list| %>
+	   <li>
+	   	<%= link_to list.title, list_path(list) %>
+	   </li>
+	 <% end %>
+ </ul>
+<% else %>
+<% end %>
+
+<%= link_to 'Create Task', new_list_path %>

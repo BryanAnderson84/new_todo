@@ -1,0 +1,23 @@
+<% if @list.errors.any? %>
+  <ul>
+    <% @list.errors.full_messages.each do |error| %>
+      <li> <%= error %> </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= form_for @list do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <br />
+  <%= f.label :title, "Task" %>
+  <%= f.text_field :title %>
+
+  <br />
+  <%= f.label :due_date, "Due Date"%>
+  <%= f.text_field :due_date %>
+
+  <br />
+  <%= f.submit %>
+<% end %>

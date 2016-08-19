@@ -1,0 +1,14 @@
+<h1> Additional Options </h1>
+
+<p> Description: <%= @item.description %> </p>
+
+<p> Priority Level: <%= @item.priority %> </p>
+
+<p> Date Created: <%= @item.created_at %> </p>
+
+<%= link_to "Edit", edit_list_item_path(@list, @item) %>
+<%= link_to "Delete", list_item_path(@list, @item), method: :delete,
+    data: {confirm: 'Are you sure you want to delete these options?'} %>
+
+<br />
+<%= link_to 'Task List', lists_path %>

@@ -1,0 +1,13 @@
+<h1> <%= @list.title %> - Additional Options </h1>
+
+<% if @items.any? %>
+  <ul>
+    <% @items.each do |item| %>
+      <li> <%= item.info %> - <%= link_to 'Show', list_item_path(@list, item) %> </li>
+    <% end %>
+  </ul>
+<% else %>
+  <h3>No additional options, please add some!</h3>
+<% end %>
+
+<%= link_to "Modify Additional Options", new_list_item_path(@list) %>
